@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div class="container d-flex justify-content-around  p-5">
+        <div class="container d-flex justify-content-around p-5">
             <img  src="../assets/images/logo.png" alt="">
             <nav>
                 <ul>
@@ -64,9 +64,10 @@ ul li {
     display: inline-block;
     font-size: 0.7rem;
     cursor: pointer;
+    padding-bottom: 5px;
 
     &:hover {
-            border-bottom: 5px solid #f72a0c;
+            border-bottom: 3px solid #f72a0c;
             color: #f72a0c;
         }
 }
