@@ -82,7 +82,7 @@
             <!-- fine speakers -->
 
             <!-- program -->
-            <div id="section-program" class="row d-flex justify-content-around align-items-center">
+            <div id="program-section" class="row d-flex justify-content-around align-items-center">
 
                 <div id="all-program" class="d-flex flex-column justify-content-around">
 
@@ -195,7 +195,7 @@
             </div>
 
             <!-- location -->
-            <div id="location-bg" class="row m-0">
+            <div id="location-section" class="row m-0">
                 <div class="d-flex flex-column justify-content-center gap-2 text-center">
                     <h1 class="fw-bold pb-4">
                         LOCATION
@@ -276,6 +276,17 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+            <!-- tickets -->
+            <div id="tickets-section" class="row d-flex justify-content-center align-items-center m-0">
+                <h1 class="text-center fw-bold text-white">TICKETS</h1>
+
+                <div class="d-flex flex-column justify-content-center mx-3" v-for="(ticket, index) in tickets" :key="index">
+                    <div>
+                        
+                    </div>
                 </div>
             </div>
         </div>        
@@ -607,7 +618,7 @@ data() {
 }
 
 /* program */
-#section-program {
+#program-section {
     width: 100%;
     height: 70vh;
     margin: 0;
@@ -709,7 +720,7 @@ data() {
 }
 
 /* location */
-#location-bg {
+#location-section {
     width: 100%;
     height: 48vh;
     background: url(../assets/images/location-bg.jpg);
@@ -759,5 +770,16 @@ data() {
     list-style: none;
     color: #f72b0c;
     }
+}
+
+/* tickets */
+#tickets-section {
+    width: 100%;
+    height: 50vh;
+    background: url(../assets/images/ticket-bg.jpg);
+    background-position: center;
+        h1 {
+            letter-spacing: 4px;
+        }
 }
 </style>
