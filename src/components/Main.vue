@@ -99,7 +99,28 @@
                         </span>
                     </div>
 
+                    <div id="program-bottom" class="d-flex flex-column text-start">
 
+                        <div class="d-flex">
+                            <div class="single-day p-3"
+                            v-for="(day, index) in days" :key="index">
+                                <ul class="ms-2 my-0 p-0">
+                                    <li>
+                                        <a href="#">
+                                            <h6 class="fw-bolder">
+                                                {{ day.nDay }}
+                                            </h6>
+                                            <span>
+                                                {{ day.date }}
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        
+                    </div>
                 </div>
             </div>    
         </div>        
@@ -185,7 +206,32 @@ data() {
                 job: "Maxii's Manager"
             },
         ],
-        
+        days: [
+            {
+                nDay: "DAY 1",
+                date: "23 May 2016"
+            },
+            {
+                nDay: "DAY 2",
+                date: "23 May 2030"
+            },
+            {
+                nDay: "DAY 3",
+                date: "24 May 2030"
+            },
+            {
+                nDay: "DAY 4",
+                date: "25 May 2030"
+            },
+            {
+                nDay: "DAY 5",
+                date: "26 May 2030"
+            }, 
+            {
+                nDay: "",
+                date: ""
+            },
+        ],
         }
     }
 }
@@ -333,7 +379,32 @@ data() {
                 color: #f72b0c;
             }
         }
-        
+        #program-bottom {
+            background: #f72b0c;
+            .single-day {
+                width: 30%;     
+                border-right: 1px solid #be281a;
+                
+                &:last-child {
+                    border: 0;
+                }
+                &:hover {
+                    background: #be281a;
+                }
+                
+                li {
+                    list-style-type: none;
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        span {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            
+        }
             
     }
 }
