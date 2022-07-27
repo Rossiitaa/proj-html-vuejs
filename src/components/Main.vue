@@ -2,10 +2,10 @@
     <main>
         <div class="container-fluid">
             <!-- informazioni azienda -->
-            <div id="info-general" class="row d-flex justify-content-evenly align-items-center mx-auto">
-                <div class="info-text col-12 d-flex flex-column justify-content-around" v-for="(info , index) in informations" :key="index">
+            <div id="info-general" class="row d-flex justify-content-between align-items-center mx-auto">
+                <div class="info-text col-12 d-flex flex-column justify-content-around position-relative" v-for="(info , index) in informations" :key="index">
                     <div class="d-flex fs-4">
-                        <font-awesome-icon :icon="['fas', info.icon]" class="mr-3" />
+                        <font-awesome-icon :icon="['fas', 'fa-trophy']" class="mr-3" />
                         <h6>{{ info.title }}</h6>
                     </div>
                     <p>
@@ -16,6 +16,8 @@
                     </a>
                 </div>
             </div>
+            <!-- fine informazioni azienda -->
+
             <!-- countdown -->
             <div id="countdown" class="row d-flex align-items-center">
                 <div id="count-card" class="d-flex flex-column justify-content-around">
@@ -43,7 +45,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- fine countdown -->
             <!-- speakers -->
             <div id="speakers-section" class="row d-flex flex-column justify-content-center">
 
@@ -57,13 +59,12 @@
                             <button href="#" class="px-3 py-2">
                                 <font-awesome-icon icon="fas fa-angle-left" />
                             </button>
-                            <button href="#" class="px-3 py-2">
+                            <button href="#" class="btn px-3 py-2">
                                 <font-awesome-icon icon="fas fa-angle-right" />
                             </button>
                         </div>
                     </div>
 
-                    <!-- lista degli speaker-->
                     <div class="d-flex justify-content-between">
                         <div class="single-speaker d-flex flex-column justify-content-evenly text-center"
                         v-for="(speaker, index) in speakers" :key="index">
@@ -78,6 +79,29 @@
                     </div>
                 </div>
             </div>
+            <!-- fine speakers -->
+
+            <!-- program -->
+            <div id="section-program" class="row d-flex justify-content-around align-items-center">
+
+                <div id="all-program" class="d-flex flex-column justify-content-around">
+                    <!-- introduzione -->
+                    <div id="program-top" class="d-flex justify-content-between align-items-center mb-5">
+                        <h1 class="align-self-start fw-bolder">
+                            PROGRAM
+                        </h1>
+                        <p class="text-start me-5">
+                            This conference run through all 4 days from 23 - 26 May 2016.
+                            We also provide free lunch and coffee break in each day.
+                        </p>
+                        <span class="ps-5">
+                            View Full Program
+                        </span>
+                    </div>
+
+
+                </div>
+            </div>    
         </div>        
     </main>
 </template>
@@ -90,21 +114,21 @@ data() {
             {
                 icon: "fas fa-trophy",
                 title: "WHO WE ARE",
-                text: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+                text: "Donec id elit non mi porta gravida at eget me tus. Sed posuere consectetur estat lobo rtis. Cum sociis natoque.",
                 url: "#",
                 urlText: "Learn More"
             },
             {
                 icon: "fas fa-bolt",
                 title: "WHAT WE DO",
-                text: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+                text: "Donec id elit non mi porta gravida at eget me tus. Sed posuere consectetur estat lobo rtis. Cum sociis natoque.",
                 url: "#",
                 urlText: "Learn More"
             },
             {
                 icon: "fas fa-question",
                 title: "WHY US?",
-                text: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
+                text: "Donec id elit non mi porta gravida at eget me tus. Sed posuere consectetur estat lobo rtis. Cum sociis natoque.",
                 url: "#",
                 urlText: "Learn More"
             },
@@ -160,29 +184,38 @@ data() {
                 name: "ANGELINA HOLY",
                 job: "Maxii's Manager"
             },
-        ]
+        ],
+        
         }
     }
 }
 </script>
 
 <style lang='scss' scoped>
+/* informazioni azienda */
 #info-general {
     width: 60%;
     height: 30vh;
 
+    svg {
+    position: absolute;
+    top: -3px;
+    left: -40px;
+    color: #c6c1bd;
+    }
     .info-text {
-        width: 33%;
+        width: 30%;
         height: 55%;
-        text-align: left;
             
             h6 {
                 color: #272727;
+                letter-spacing: 2px;
             }
         }
         p {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: #868686;
+            margin-top: 1rem;
         }
         a {
             color: #f72b0c;
@@ -190,13 +223,14 @@ data() {
         }
     }
 
+/* countdown */
 #countdown {
-    height: 65vh;
+    height: 70vh;
     background: url(../assets/images/coutdown-bg1.jpg);
     background-size: contain;
     background-position: center;
     #count-card {
-        height: 60%;
+        height: 68%;
             h1 {
                 font-size: 50px;
                 font-weight: 700;
@@ -212,6 +246,7 @@ data() {
             display: flex;
             justify-content: center;
             
+            
             input {
                 outline: 0;
                 border: 0;
@@ -223,25 +258,36 @@ data() {
                 border-color: #d92719;
                 background: #f72b0c;
                 color: #fff;
+
+                &:hover {
+                    background-color: #f72a0c;
+                    color: #fff;
+                }
             }
         }
         h5 {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 1.5rem;
-                
+                font-size: 1.3rem;
+                letter-spacing: 2px;
+                margin: 0;
             }
     }
 
+/* speakers */
     #speakers-section {
     height: 55vh;
     background: #f3f3f3;
     #speakers-team {
-        width: 59%;
+        width: 60%;
         height: 40vh;
             #navigation {
                 width: 100%;
+                    h2 {
+                        letter-spacing: 2px;
+                    }
+
                 #arrow-section-speaker {
                     button {
                         font-size: 11px;
@@ -262,7 +308,33 @@ data() {
                     color: #868686;
                     font-size: 13px;
                 }
+                h5 {
+                letter-spacing: 2px;
+                font-size: 1rem;
             }
+        }
+    }
+}
+
+/* program */
+#section-program {
+    width: 100%;
+    height: 70vh;
+    #all-program {
+        width: 60%;
+        #program-top {
+            p {
+                width: 45%;
+                font-size: 15px;
+                opacity: 0.6;
+            }
+            span {
+                font-size: 14px;
+                color: #f72b0c;
+            }
+        }
+        
+            
     }
 }
 </style>
