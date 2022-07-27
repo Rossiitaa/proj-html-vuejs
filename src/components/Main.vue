@@ -431,8 +431,29 @@ data() {
         ],
         newsList: [
             {
-
-            }
+                img: require ("../assets/images/photodune-7770665-two-white-coffee-mug-with-diy-decoration-o.jpg"),
+                alt: "cups_of_coffee",
+                date: "03 Dec 2013 / 0 Comments",
+                title: "SEDIAL EIUSMOD TEMPOR",
+                text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
+                urlText: "Learn More",
+            },
+            {
+                img: require ("../assets/images/photodune-8797753-multiethnic-people-with-startup-business-t.jpg"),
+                alt: "meeting",
+                date: "03 Dec 2013 / 2 Comments",
+                title: "DONEC LUCTUS IMPERDIET",
+                text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
+                urlText: "Learn More",
+            },
+            {
+                img: require ("../assets/images/photodune-8522811-speaker-at-business-conference-and-present.jpg"),
+                alt: "presentation",
+                date: "03 Dec 2013 / 2 Comments",
+                title: "MAGNA PARS STUDIORUM",
+                text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
+                urlText: "Learn More",
+            },
         ]
         }
     }
@@ -684,4 +705,7 @@ data() {
             color: #f72a0c;
         }
 }
+
+/* recent news */
+
 </style>
