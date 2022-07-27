@@ -1,6 +1,6 @@
 <template>
     <main>
-        <div class="container-fluid">
+        <div class="container-fluid p-0 m-0">
             <!-- informazioni azienda -->
             <div id="info-general" class="row d-flex justify-content-between align-items-center mx-auto">
                 <div class="info-text col-12 d-flex flex-column justify-content-around position-relative" v-for="(info , index) in informations" :key="index">
@@ -165,9 +165,33 @@
                 </div>
             </div>    
             <!-- fine program -->
+
             <!-- map -->
-            <div>
-                <img src="../assets/images/chrome_Hgkn5dyhd4.png" alt="mappa google" class="map" style="width:100%">
+            <div id="map" class="row">
+                <div class="d-flex flex-wrap my-2 px-0 position-relative">
+                    <div v-for="(map, index) in maps" :key="index">
+                        <img :src="map.item" :alt="map.alt" class="">
+                    </div>
+                    <div class="position-absolute top-0 start-0 m-3 shadow-sm d-flex">
+                        <a href="#">
+                            <h5 class="p-2 fw-bold">
+                                Map
+                            </h5>
+                        </a>
+                        <a href="#">
+                            <h5 class="p-2">
+                                Satellite
+                            </h5>
+                        </a>
+                    </div>
+                    <span class="position-absolute bottom-0 end-0 pe-2" style="font-size: 12px">
+                        Map data &#169;2020 Google 200 m Terms of Use Report a map error
+                    </span>
+                    <span class="position-absolute bottom-0 pe-2">
+                        <img src="../assets/images/google4.png" alt="" style="width:10% height:10%">
+                    </span>
+                </div>
+                
             </div>
         </div>        
     </main>
@@ -278,6 +302,65 @@ data() {
                 date: ""
             },
         ],
+        maps: [
+            {
+                item: require ("../assets/images/vt (17).png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt (11).png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt (1).png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt (5).png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt (4).png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt (9).png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt (20).png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt (13).png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt (12).png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt (2).png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt.png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt (3).png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt (15).png"),
+                alt: "vt-17-map"
+            },
+            {
+                item: require ("../assets/images/vt (18).png"),
+                alt: "vt-17-map"
+            },
+
+        ]
         }
     }
 }
@@ -317,10 +400,12 @@ data() {
 
 /* countdown */
 #countdown {
+    width: 100%;
     height: 70vh;
     background: url(../assets/images/coutdown-bg1.jpg);
     background-size: contain;
     background-position: center;
+    margin: 0;
     #count-card {
         height: 68%;
             h1 {
@@ -369,8 +454,10 @@ data() {
 
 /* speakers */
     #speakers-section {
+    width: 100%;
     height: 55vh;
     background: #f3f3f3;
+    margin: 0;
     #speakers-team {
         width: 60%;
         height: 40vh;
@@ -412,6 +499,7 @@ data() {
 #section-program {
     width: 100%;
     height: 70vh;
+    margin: 0;
     #all-program {
         width: 60%;
         #program-top {
@@ -494,4 +582,19 @@ data() {
 }
 
 /* map */
+#map {
+    width: 100%;
+    margin: 0;
+    img {
+        width: 100%;
+        height: 271.8px;
+    }
+    span {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
 </style>
