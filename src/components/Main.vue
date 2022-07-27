@@ -212,7 +212,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <a href="#" class="text-decoration-none">
+                        <a href="#" id="check" class="text-decoration-none">
                             Check For Accommodations Here
                         </a>
                     </div>
@@ -229,6 +229,37 @@
                     </div>
                 </div>
                 
+            </div>
+
+            <!-- recent news -->
+            <div id="news-section" class="row d-flex justify-content-around align-items-center">
+                <div v-for="(news,index) in newsList" :key="index">
+                    <img :src="news.img" :alt="news.alt" class="mb-4">
+                        <ul>
+                            <li>
+                                <h6  class="mb-2">
+                                    {{ news.date }}
+                                </h6>
+                            </li>
+                            <li>
+                                <h5 class="mb-4 fw-bold">
+                                    {{ news.title }}
+                                </h5>
+                            </li>
+                            <li>
+                                <p class="mb-4">
+                                    {{ news.text }}
+                                </p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        {{ news.urlText }}
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                </div>
             </div>
         </div>        
     </main>
@@ -397,6 +428,11 @@ data() {
                 alt: "vt-17-map"
             },
 
+        ],
+        newsList: [
+            {
+
+            }
         ]
         }
     }
@@ -643,6 +679,9 @@ data() {
     color: #fff;
         h1, h2 {
             letter-spacing: 5px;
+        }
+        #check {
+            color: #f72a0c;
         }
 }
 </style>
