@@ -233,32 +233,49 @@
 
             <!-- recent news -->
             <div id="news-section" class="row d-flex justify-content-around align-items-center">
-                <div v-for="(news,index) in newsList" :key="index">
-                    <img :src="news.img" :alt="news.alt" class="mb-4">
-                        <ul>
-                            <li>
-                                <h6  class="mb-2">
-                                    {{ news.date }}
-                                </h6>
-                            </li>
-                            <li>
-                                <h5 class="mb-4 fw-bold">
-                                    {{ news.title }}
-                                </h5>
-                            </li>
-                            <li>
-                                <p class="mb-4">
-                                    {{ news.text }}
-                                </p>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>
-                                        {{ news.urlText }}
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
+                <div id="news-area" class="my-5">
+
+                    <div class="d-flex justify-content-between mb-5">
+                        <h3 class="fw-bold">
+                            RECENT NEWS
+                        </h3>
+                        <a href="#" class="read-all-news">
+                            <span>
+                                Read All News
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center gap-5">
+                        <div v-for="(news,index) in newsList" :key="index">
+                            <img :src="news.img" :alt="news.alt" class="mb-4">
+                            <ul class="p-0">
+                                <li>
+                                    <h6  class="mt-2 fst-italic">
+                                        {{ news.date }}
+                                    </h6>
+                                </li>
+                                <li>
+                                    <h5 class="mb-4 fw-bold">
+                                        {{ news.title }}
+                                    </h5>
+                                </li>
+                                <li>
+                                    <p class="mb-4">
+                                        {{ news.text }}
+                                    </p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="fst-italic"> 
+                                            {{ news.urlText }}
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>        
@@ -436,7 +453,7 @@ data() {
                 date: "03 Dec 2013 / 0 Comments",
                 title: "SEDIAL EIUSMOD TEMPOR",
                 text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
-                urlText: "Learn More",
+                urlText: "Read More",
             },
             {
                 img: require ("../assets/images/photodune-8797753-multiethnic-people-with-startup-business-t.jpg"),
@@ -444,7 +461,7 @@ data() {
                 date: "03 Dec 2013 / 2 Comments",
                 title: "DONEC LUCTUS IMPERDIET",
                 text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
-                urlText: "Learn More",
+                urlText: "Read More",
             },
             {
                 img: require ("../assets/images/photodune-8522811-speaker-at-business-conference-and-present.jpg"),
@@ -452,7 +469,7 @@ data() {
                 date: "03 Dec 2013 / 2 Comments",
                 title: "MAGNA PARS STUDIORUM",
                 text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
-                urlText: "Learn More",
+                urlText: "Read More",
             },
         ]
         }
@@ -694,7 +711,7 @@ data() {
 /* location */
 #location-bg {
     width: 100%;
-    height: 45vh;
+    height: 48vh;
     background: url(../assets/images/location-bg.jpg);
     background-position: center;
     color: #fff;
@@ -707,5 +724,40 @@ data() {
 }
 
 /* recent news */
-
+#news-section {
+    width: 100%;
+    #news-area {
+        width: 65%;
+        img {
+            width: 100%;
+        }
+        li {
+            list-style-type: none;
+            h6 {
+                opacity: 0.4;
+                letter-spacing: 2px;
+            }
+            p {
+                opacity: 0.4;
+                font-size: 0.9rem;
+            }
+            h5 {
+                letter-spacing: 2px;
+            }
+            a {
+                text-decoration: none;
+                color: #f72a0c;
+                letter-spacing: 2px;
+                span {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .read-all-news {
+    text-decoration: none;
+    list-style: none;
+    color: #f72b0c;
+    }
+}
 </style>
