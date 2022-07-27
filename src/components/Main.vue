@@ -193,7 +193,7 @@
                 </div>
                 
             </div>
-
+            <!-- fine map -->
             <!-- location -->
             <div id="location-section" class="row m-0">
                 <div class="d-flex flex-column justify-content-center gap-2 text-center">
@@ -278,17 +278,51 @@
 
                 </div>
             </div>
-
+            <!-- fine recent news -->
             <!-- tickets -->
-            <div id="tickets-section" class="row d-flex justify-content-center align-items-center m-0">
-                <h1 class="text-center fw-bold text-white">TICKETS</h1>
+            <div id="tickets-section" class="row d-flex justify-content-center align-items-center m-0 py-5">
+                <h1 class="text-center fw-bold text-white">
+                    TICKETS
+                </h1>
 
-                <div class="d-flex flex-column justify-content-center mx-3" v-for="(ticket, index) in tickets" :key="index">
-                    <div>
-                        
+                <div class="all-sec-ticket d-flex flex-column justify-content-center mx-2" v-for="(ticket, index) in tickets" :key="index">
+                    <div class="header-ticket p-4 text-center">
+                        <h5 class="fw-bold mb-1">
+                            {{ ticket.type}}
+                        </h5>
+                        <h5 class="fw-bold">
+                            {{ ticket.price }}
+                        </h5>
+                    </div>
+
+                    <div class="main-ticket p-4">
+                        <ul class="text-center m-0 p-0">
+                            <li class="m-3">
+                                {{ ticket.contents[0].access }}
+                            </li>
+                            <li class="m-3">
+                                {{ ticket.contents[0].break }}
+                            </li>
+                            <li class="m-3">
+                                {{ ticket.contents[0].lunch }}
+                            </li>
+                            <li class="m-3">
+                                {{ ticket.contents[0].document }}
+                            </li>
+                            <li class="m-3">
+                                {{ ticket.contents[0].voucher }}
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-ticket p-3 text-center">
+                        <a href="#" class="fw-bolder">
+                            {{ ticket.button }}
+                        </a>
                     </div>
                 </div>
             </div>
+            <!-- fine tickets -->
         </div>        
     </main>
 </template>
@@ -481,6 +515,50 @@ data() {
                 title: "MAGNA PARS STUDIORUM",
                 text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
                 urlText: "Read More",
+            },
+        ],
+        tickets: [
+            {
+                type: "ONE DAY PASS",
+                price: "FREE",
+                contents: [
+                    {
+                        access: "One Day Access",
+                        break: "Coffee Break",
+                        lunch: "Lunch(International Buffet)",
+                        document: "Document Sheets",
+                        voucher: "50USD Voucher For Next Event",
+                    },
+                ],
+                button: "BOOK NOW",
+            },
+            {
+                type: "FOUR DAY PASSES",
+                price: "750.00 USD",
+                contents: [
+                    {
+                        access: "Four Day Access",
+                        break: "Coffee Break",
+                        lunch: "Lunch(International Buffet)",
+                        document: "Document Sheets",
+                        voucher: "100USD Voucher For Next Event",
+                    },
+                ],
+                button: "BOOK NOW",
+            },
+            {
+                type: "TWO DAY PASSES",
+                price: "FREE",
+                contents: [
+                    {
+                        access: "Two Day Access",
+                        break: "Coffee Break",
+                        lunch: "Lunch(International Buffet)",
+                        document: "Document Sheets",
+                        voucher: "70USD Voucher For Next Event",
+                    },
+                ],
+                button: "BOOK NOW",
             },
         ]
         }
@@ -775,9 +853,10 @@ data() {
 /* tickets */
 #tickets-section {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     background: url(../assets/images/ticket-bg.jpg);
     background-position: center;
+    background-size: contain;
         h1 {
             letter-spacing: 4px;
         }
