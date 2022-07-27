@@ -204,20 +204,20 @@
                         GD BUILDING, GRAND CONFERENCE ROOM
                     </h2>
 
-                    <div id="address">
+                    <div>
                         <font-awesome-icon icon="fas fa-location-arrow" class="me-2" />
                         <span>
                             11 GD Building, River Mail, New york, USA 8879
                         </span>
                     </div>
 
-                    <div id="check" class="mb-4">
+                    <div class="mb-4">
                         <a href="#" class="text-decoration-none">
                             Check For Accommodations Here
                         </a>
                     </div>
 
-                    <div id="contact" class="d-flex justify-content-between pt-2 mx-auto border-top border-2" style="width: 24%">
+                    <div class="d-flex justify-content-between pt-2 mx-auto border-top border-2" style="width: 24%">
                         <a href="#" style="color: #ffffff" class="text-decoration-none">
                             <font-awesome-icon icon="fas fa-phone" class="me-2" />
                                 +1-112-222-3344
@@ -642,10 +642,7 @@ data() {
     background-position: center;
     color: #fff;
         h1, h2 {
-            letter-spacing: 2px;
-        }
-        #address {
-
+            letter-spacing: 5px;
         }
 }
 </style>
