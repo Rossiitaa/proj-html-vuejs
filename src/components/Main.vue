@@ -5,7 +5,7 @@
             <div id="info-general" class="row d-flex justify-content-between align-items-center mx-auto">
                 <div class="info-text col-12 d-flex flex-column justify-content-around position-relative" v-for="(info , index) in informations" :key="index">
                     <div class="d-flex fs-4">
-                        <font-awesome-icon :icon="['fas', 'fa-trophy']" class="mr-3" />
+                        <font-awesome-icon :icon="info.icon" class="mr-3" />
                         <h6>{{ info.title }}</h6>
                     </div>
                     <p>
@@ -190,6 +190,43 @@
                     <span class="position-absolute bottom-0 pe-2">
                         <img src="../assets/images/google4.png" alt="" style="width:10% height:10%">
                     </span>
+                </div>
+                
+            </div>
+
+            <!-- location -->
+            <div id="location-bg" class="row m-0">
+                <div class="d-flex flex-column justify-content-center gap-2 text-center">
+                    <h1 class="fw-bold pb-4">
+                        LOCATION
+                    </h1>
+                    <h2 class="fw-bold fs-4">
+                        GD BUILDING, GRAND CONFERENCE ROOM
+                    </h2>
+
+                    <div id="address">
+                        <font-awesome-icon icon="fas fa-location-arrow" class="me-2" />
+                        <span>
+                            11 GD Building, River Mail, New york, USA 8879
+                        </span>
+                    </div>
+
+                    <div id="check" class="mb-4">
+                        <a href="#" class="text-decoration-none">
+                            Check For Accommodations Here
+                        </a>
+                    </div>
+
+                    <div id="contact" class="d-flex justify-content-between pt-2 mx-auto border-top border-2" style="width: 24%">
+                        <a href="#" style="color: #ffffff" class="text-decoration-none">
+                            <font-awesome-icon icon="fas fa-phone" class="me-2" />
+                                +1-112-222-3344
+                        </a>
+                        <a href="#" style="color: #ffffff" class="text-decoration-none">
+                            <font-awesome-icon icon="fas fa-envelope" class="me-2" />
+                                Contact@TheKeynoteTheme.com
+                        </a>
+                    </div>
                 </div>
                 
             </div>
@@ -587,7 +624,7 @@ data() {
     margin: 0;
     img {
         width: 100%;
-        height: 271.8px;
+        height: 271.7px;
     }
     span {
         img {
@@ -597,4 +634,18 @@ data() {
     }
 }
 
+/* location */
+#location-bg {
+    width: 100%;
+    height: 45vh;
+    background: url(../assets/images/location-bg.jpg);
+    background-position: center;
+    color: #fff;
+        h1, h2 {
+            letter-spacing: 2px;
+        }
+        #address {
+
+        }
+}
 </style>
