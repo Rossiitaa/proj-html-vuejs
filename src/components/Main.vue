@@ -859,6 +859,35 @@ data() {
     background-size: contain;
         h1 {
             letter-spacing: 4px;
+            padding: 3rem 0;
         }
+        .all-sec-ticket {
+            width: 22%;
+        li {
+            list-style-type: none;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .header-ticket {
+            background: #e6e6e6;
+            h5 {
+                &:nth-last-of-type(1) {
+                    color: #f72b0c;
+                    font-size: 18px;
+                }
+            }
+        }
+        .main-ticket {
+            background: #f8f8f8;
+            color: #868686;
+            font-style: italic;
+        }
+        .footer-ticket {
+            background: #f72b0c;
+            font-size: 13px;
+        }
+    }      
 }
 </style>
