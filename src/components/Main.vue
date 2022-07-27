@@ -94,9 +94,9 @@
                             This conference run through all 4 days from 23 - 26 May 2016.
                             We also provide free lunch and coffee break in each day.
                         </p>
-                        <span class="ps-5">
+                        <a href="#" class="ps-5">
                             View Full Program
-                        </span>
+                        </a>
                     </div>
 
                     <div id="program-bottom" class="d-flex flex-column text-start">
@@ -119,7 +119,48 @@
                             </div>
                         </div>
 
-                        
+                        <div id="info-program" class="d-flex justify-content-around align-items-center">
+                                <div id="info-left" class="d-flex flex-column align-items-center">
+                                    <ul class="m-0 p-0">
+                                        <li class="p-1">
+                                            <a href="#">
+                                                <font-awesome-icon icon="fas fa-clock"  class="me-2"/>
+                                                <span>
+                                                    09:00 - 10:30
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="p-1">
+                                            <a href="#">
+                                                <font-awesome-icon icon="fas fa-location-arrow" class="me-2"/>
+                                                <span>
+                                                    ROOM A
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="p-1">
+                                            <a href="#">
+                                                <font-awesome-icon icon="fas fa-user" class="me-2"/>
+                                                <span>
+                                                    LAURENCE FRANCIS
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            <div class="info-right d-flex flex-column justify-content-around">
+                                <h4>
+                                    WELCOMING AND INTRODUCTION
+                                </h4>
+                                <p>
+                                    Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec
+                                    ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur...
+                                </p>
+                                <img src="../assets/images/speaker-8-150x150.jpg" alt="speaker_img"
+                                class="rounded-1">
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>    
@@ -374,9 +415,10 @@ data() {
                 font-size: 15px;
                 opacity: 0.6;
             }
-            span {
-                font-size: 14px;
+            a {
+                font-size: 17px;
                 color: #f72b0c;
+                text-decoration: none;
             }
         }
         #program-bottom {
@@ -403,7 +445,44 @@ data() {
                     }
                 }
             }
-            
+            #info-program {
+                height: 30vh;
+                background: #f6f6f6;
+                #info-left {
+                    width: 49%;
+                    height: 22vh;
+                    ul {
+                        width: 70%;
+                        li {
+                            padding: 20px;
+                            list-style-type: none;
+                            a {
+                                color: #868686;
+                                text-decoration: none;
+                                font-size: 12px;
+                                
+                                &:hover span {
+                                    color: #f72b0c;
+                                }
+                            }
+                        }
+                    }
+                }
+                .info-right {
+                    height: 25vh;
+
+                    h4 {
+                        letter-spacing: 2px;
+                    }
+                    p {
+                        color: #868686;
+                        opacity: 0.8;
+                    }
+                    img {
+                        width: 6%;
+                    }
+                }
+            }
         }
             
     }
