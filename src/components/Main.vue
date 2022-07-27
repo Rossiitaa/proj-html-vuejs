@@ -85,7 +85,7 @@
             <div id="section-program" class="row d-flex justify-content-around align-items-center">
 
                 <div id="all-program" class="d-flex flex-column justify-content-around">
-                    <!-- introduzione -->
+
                     <div id="program-top" class="d-flex justify-content-between align-items-center mb-5">
                         <h1 class="align-self-start fw-bolder">
                             PROGRAM
@@ -164,6 +164,11 @@
                     </div>
                 </div>
             </div>    
+            <!-- fine program -->
+            <!-- map -->
+            <div>
+                <img src="../assets/images/chrome_Hgkn5dyhd4.png" alt="mappa google" class="map" style="width:100%">
+            </div>
         </div>        
     </main>
 </template>
@@ -487,4 +492,6 @@ data() {
             
     }
 }
+
+/* map */
 </style>
