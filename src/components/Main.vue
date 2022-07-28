@@ -416,280 +416,281 @@
 
 <script>
 export default {
-data() {
-    return {
-        informations: [
-            {
-                icon: "fas fa-trophy",
-                title: "WHO WE ARE",
-                text: "Donec id elit non mi porta gravida at eget me tus. Sed posuere consectetur estat lobo rtis. Cum sociis natoque.",
-                url: "#",
-                urlText: "Learn More"
-            },
-            {
-                icon: "fas fa-bolt",
-                title: "WHAT WE DO",
-                text: "Donec id elit non mi porta gravida at eget me tus. Sed posuere consectetur estat lobo rtis. Cum sociis natoque.",
-                url: "#",
-                urlText: "Learn More"
-            },
-            {
-                icon: "fas fa-question",
-                title: "WHY US?",
-                text: "Donec id elit non mi porta gravida at eget me tus. Sed posuere consectetur estat lobo rtis. Cum sociis natoque.",
-                url: "#",
-                urlText: "Learn More"
-            },
-        ],
-        countdown: [
-            {
-                number: "3399",
-                text: "DAYS",
-                bg: "@000",
-                transp: "0.8"
-            },
-            {
-                number: "17",
-                text: "HOURS",
-                bg: "@000",
-                transp: "0.7"
-            },
-            {
-                number: "28",
-                text: "MINS",
-                bg: "@000",
-                transp: "0.5"
-            },
-            {
-                number: "17",
-                text: "SECS",
-                bg: "@000",
-                transp: "0.3"
-            },
-        ],
-        speakers: [
-            {
-                img: require ("../assets/images/speaker-6.jpg"),
-                alt: "patrick spencer img",
-                name: "PATRICK SPENCER",
-                job: "S&P Analyzer"
-            },
-            {
-                img: require("../assets/images/speaker-5.jpg"),
-                alt: "janet_jones_img",
-                name: "JANET JONES",
-                job: "Newyork Post's GM"
-            },
-            {
-                img: require("../assets/images/speaker-4.jpg"),
-                alt: "michael dover img",
-                name: "MICHAEL DOVER",
-                job: "Starbuck's CEO"
-            },
-            {
-                img: require("../assets/images/speaker-3.jpg"),
-                alt: "angelina holy img",
-                name: "ANGELINA HOLY",
-                job: "Maxii's Manager"
-            },
-        ],
-        days: [
-            {
-                nDay: "DAY 1",
-                date: "23 May 2016"
-            },
-            {
-                nDay: "DAY 2",
-                date: "23 May 2030"
-            },
-            {
-                nDay: "DAY 3",
-                date: "24 May 2030"
-            },
-            {
-                nDay: "DAY 4",
-                date: "25 May 2030"
-            },
-            {
-                nDay: "DAY 5",
-                date: "26 May 2030"
-            }, 
-            {
-                nDay: "",
-                date: ""
-            },
-        ],
-        maps: [
-            {
-                item: require ("../assets/images/vt (17).png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt (11).png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt (1).png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt (5).png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt (4).png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt (9).png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt (20).png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt (13).png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt (12).png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt (2).png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt.png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt (3).png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt (15).png"),
-                alt: "vt-17-map"
-            },
-            {
-                item: require ("../assets/images/vt (18).png"),
-                alt: "vt-17-map"
-            },
+name: 'Main',
+    data() {
+        return {
+            informations: [
+                {
+                    icon: "fas fa-trophy",
+                    title: "WHO WE ARE",
+                    text: "Donec id elit non mi porta gravida at eget me tus. Sed posuere consectetur estat lobo rtis. Cum sociis natoque.",
+                    url: "#",
+                    urlText: "Learn More"
+                },
+                {
+                    icon: "fas fa-bolt",
+                    title: "WHAT WE DO",
+                    text: "Donec id elit non mi porta gravida at eget me tus. Sed posuere consectetur estat lobo rtis. Cum sociis natoque.",
+                    url: "#",
+                    urlText: "Learn More"
+                },
+                {
+                    icon: "fas fa-question",
+                    title: "WHY US?",
+                    text: "Donec id elit non mi porta gravida at eget me tus. Sed posuere consectetur estat lobo rtis. Cum sociis natoque.",
+                    url: "#",
+                    urlText: "Learn More"
+                },
+            ],
+            countdown: [
+                {
+                    number: "3399",
+                    text: "DAYS",
+                    bg: "@000",
+                    transp: "0.8"
+                },
+                {
+                    number: "17",
+                    text: "HOURS",
+                    bg: "@000",
+                    transp: "0.7"
+                },
+                {
+                    number: "28",
+                    text: "MINS",
+                    bg: "@000",
+                    transp: "0.5"
+                },
+                {
+                    number: "17",
+                    text: "SECS",
+                    bg: "@000",
+                    transp: "0.3"
+                },
+            ],
+            speakers: [
+                {
+                    img: require ("../assets/images/speaker-6.jpg"),
+                    alt: "patrick spencer img",
+                    name: "PATRICK SPENCER",
+                    job: "S&P Analyzer"
+                },
+                {
+                    img: require("../assets/images/speaker-5.jpg"),
+                    alt: "janet_jones_img",
+                    name: "JANET JONES",
+                    job: "Newyork Post's GM"
+                },
+                {
+                    img: require("../assets/images/speaker-4.jpg"),
+                    alt: "michael dover img",
+                    name: "MICHAEL DOVER",
+                    job: "Starbuck's CEO"
+                },
+                {
+                    img: require("../assets/images/speaker-3.jpg"),
+                    alt: "angelina holy img",
+                    name: "ANGELINA HOLY",
+                    job: "Maxii's Manager"
+                },
+            ],
+            days: [
+                {
+                    nDay: "DAY 1",
+                    date: "23 May 2016"
+                },
+                {
+                    nDay: "DAY 2",
+                    date: "23 May 2030"
+                },
+                {
+                    nDay: "DAY 3",
+                    date: "24 May 2030"
+                },
+                {
+                    nDay: "DAY 4",
+                    date: "25 May 2030"
+                },
+                {
+                    nDay: "DAY 5",
+                    date: "26 May 2030"
+                }, 
+                {
+                    nDay: "",
+                    date: ""
+                },
+            ],
+            maps: [
+                {
+                    item: require ("../assets/images/vt (17).png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt (11).png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt (1).png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt (5).png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt (4).png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt (9).png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt (20).png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt (13).png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt (12).png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt (2).png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt.png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt (3).png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt (15).png"),
+                    alt: "vt-17-map"
+                },
+                {
+                    item: require ("../assets/images/vt (18).png"),
+                    alt: "vt-17-map"
+                },
 
-        ],
-        newsList: [
-            {
-                img: require ("../assets/images/photodune-7770665-two-white-coffee-mug-with-diy-decoration-o.jpg"),
-                alt: "cups_of_coffee",
-                date: "03 Dec 2013 / 0 Comments",
-                title: "SEDIAL EIUSMOD TEMPOR",
-                text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
-                urlText: "Read More",
-            },
-            {
-                img: require ("../assets/images/photodune-8797753-multiethnic-people-with-startup-business-t.jpg"),
-                alt: "meeting",
-                date: "03 Dec 2013 / 2 Comments",
-                title: "DONEC LUCTUS IMPERDIET",
-                text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
-                urlText: "Read More",
-            },
-            {
-                img: require ("../assets/images/photodune-8522811-speaker-at-business-conference-and-present.jpg"),
-                alt: "presentation",
-                date: "03 Dec 2013 / 2 Comments",
-                title: "MAGNA PARS STUDIORUM",
-                text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
-                urlText: "Read More",
-            },
-        ],
-        tickets: [
-            {
-                type: "ONE DAY PASS",
-                price: "FREE",
-                contents: [
+            ],
+            newsList: [
+                {
+                    img: require ("../assets/images/photodune-7770665-two-white-coffee-mug-with-diy-decoration-o.jpg"),
+                    alt: "cups_of_coffee",
+                    date: "03 Dec 2013 / 0 Comments",
+                    title: "SEDIAL EIUSMOD TEMPOR",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
+                    urlText: "Read More",
+                },
+                {
+                    img: require ("../assets/images/photodune-8797753-multiethnic-people-with-startup-business-t.jpg"),
+                    alt: "meeting",
+                    date: "03 Dec 2013 / 2 Comments",
+                    title: "DONEC LUCTUS IMPERDIET",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
+                    urlText: "Read More",
+                },
+                {
+                    img: require ("../assets/images/photodune-8522811-speaker-at-business-conference-and-present.jpg"),
+                    alt: "presentation",
+                    date: "03 Dec 2013 / 2 Comments",
+                    title: "MAGNA PARS STUDIORUM",
+                    text: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Idque Caesaris facere volunate liceret: sese habere....",
+                    urlText: "Read More",
+                },
+            ],
+            tickets: [
+                {
+                    type: "ONE DAY PASS",
+                    price: "FREE",
+                    contents: [
+                        {
+                            access: "One Day Access",
+                            break: "Coffee Break",
+                            lunch: "Lunch(International Buffet)",
+                            document: "Document Sheets",
+                            voucher: "50USD Voucher For Next Event",
+                        },
+                    ],
+                    button: "BOOK NOW",
+                },
+                {
+                    type: "FOUR DAY PASSES",
+                    price: "750.00 USD",
+                    contents: [
+                        {
+                            access: "Four Day Access",
+                            break: "Coffee Break",
+                            lunch: "Lunch(International Buffet)",
+                            document: "Document Sheets",
+                            voucher: "100USD Voucher For Next Event",
+                        },
+                    ],
+                    button: "BOOK NOW",
+                },
+                {
+                    type: "TWO DAY PASSES",
+                    price: "FREE",
+                    contents: [
+                        {
+                            access: "Two Day Access",
+                            break: "Coffee Break",
+                            lunch: "Lunch(International Buffet)",
+                            document: "Document Sheets",
+                            voucher: "70USD Voucher For Next Event",
+                        },
+                    ],
+                    button: "BOOK NOW",
+                },
+            ],
+            twitter: [
+                {
+                    icon: "fab fa-twitter",
+                    text: "Stand out and be vibrant with some of the best bright and bold templates on @Envato Elements. And add a splash of c... https://t.co/jFrsnzEJK7 ",
+                    time: "3 days ago",
+                },
+                {
+                    icon: "fab fa-twitter",
+                    text: "Do you need to deliver the perfect presentation or creative pitch? Sure, your ideas and plan need to be on-point, b... https://t.co/nCmvsJVDpW",
+                    time: "9 days ago",
+                },
+                {
+                    icon: "fab fa-twitter",
+                    text: "Cut yourself a piece of the BFCM sales pie with a solid marketing plan. Here are 5 ways to optimize your content fo... https://t.co/UZfKHshE0T",
+                    time: "11 days ago",
+                },
+            ],
+            sponsors: [
                     {
-                        access: "One Day Access",
-                        break: "Coffee Break",
-                        lunch: "Lunch(International Buffet)",
-                        document: "Document Sheets",
-                        voucher: "50USD Voucher For Next Event",
+                        img: require("../assets/images/banner-1.jpg"),
+                        alt: "drogler_img"
                     },
-                ],
-                button: "BOOK NOW",
-            },
-            {
-                type: "FOUR DAY PASSES",
-                price: "750.00 USD",
-                contents: [
                     {
-                        access: "Four Day Access",
-                        break: "Coffee Break",
-                        lunch: "Lunch(International Buffet)",
-                        document: "Document Sheets",
-                        voucher: "100USD Voucher For Next Event",
+                        img: require("../assets/images/banner-2.jpg"),
+                        alt: "lynk_sys_img"
                     },
-                ],
-                button: "BOOK NOW",
-            },
-            {
-                type: "TWO DAY PASSES",
-                price: "FREE",
-                contents: [
                     {
-                        access: "Two Day Access",
-                        break: "Coffee Break",
-                        lunch: "Lunch(International Buffet)",
-                        document: "Document Sheets",
-                        voucher: "70USD Voucher For Next Event",
+                        img: require("../assets/images/banner-3.jpg"),
+                        alt: "pointer_co_img"
                     },
-                ],
-                button: "BOOK NOW",
-            },
-        ],
-        twitter: [
-            {
-                icon: "fab fa-twitter",
-                text: "Stand out and be vibrant with some of the best bright and bold templates on @Envato Elements. And add a splash of c... https://t.co/jFrsnzEJK7 ",
-                time: "3 days ago",
-            },
-            {
-                icon: "fab fa-twitter",
-                text: "Do you need to deliver the perfect presentation or creative pitch? Sure, your ideas and plan need to be on-point, b... https://t.co/nCmvsJVDpW",
-                time: "9 days ago",
-            },
-            {
-                icon: "fab fa-twitter",
-                text: "Cut yourself a piece of the BFCM sales pie with a solid marketing plan. Here are 5 ways to optimize your content fo... https://t.co/UZfKHshE0T",
-                time: "11 days ago",
-            },
-        ],
-        sponsors: [
-                {
-                    img: require("../assets/images/banner-1.jpg"),
-                    alt: "drogler_img"
-                },
-                {
-                    img: require("../assets/images/banner-2.jpg"),
-                    alt: "lynk_sys_img"
-                },
-                {
-                    img: require("../assets/images/banner-3.jpg"),
-                    alt: "pointer_co_img"
-                },
-                {
-                    img: require("../assets/images/banner-4.jpg"),
-                    alt: "max_star_img"
-                },
-                {
-                    img: require("../assets/images/banner-5.jpg"),
-                    alt: "globe_care_img"
-                },
-                {
-                    img: require("../assets/images/banner-6.jpg"),
-                    alt: "the_shield_img"
-                },
+                    {
+                        img: require("../assets/images/banner-4.jpg"),
+                        alt: "max_star_img"
+                    },
+                    {
+                        img: require("../assets/images/banner-5.jpg"),
+                        alt: "globe_care_img"
+                    },
+                    {
+                        img: require("../assets/images/banner-6.jpg"),
+                        alt: "the_shield_img"
+                    },
             ]
         }
     }

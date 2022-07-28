@@ -18,39 +18,40 @@
 
 <script>
 export default {
-data() {
-    return {
-        elementList: [
-            {
-            text: "home",
-            },
-            {
-            text: "pages",
-            },
-            {
-            text: "program",
-            },
-            {
-            text: "tickets",
-            },
-            {
-            text: "speakers",
-            },
-            {
-            text: "papers",
-            },
-            {
-            text: "blog",
-            },
-            {
-            text: "shortcodes",
-            },
-            {
-            text: "|",
-            },
-        ]
+name: 'Header',
+    data() {
+        return {
+            elementList: [
+                {
+                text: "home",
+                },
+                {
+                text: "pages",
+                },
+                {
+                text: "program",
+                },
+                {
+                text: "tickets",
+                },
+                {
+                text: "speakers",
+                },
+                {
+                text: "papers",
+                },
+                {
+                text: "blog",
+                },
+                {
+                text: "shortcodes",
+                },
+                {
+                text: "|",
+                },
+            ]
+        }
     }
-}
 }
 </script>
 
