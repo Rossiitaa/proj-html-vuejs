@@ -168,29 +168,53 @@
             <!-- fine program -->
 
             <!-- map -->
-            <div id="map" class="row">
-                <div class="d-flex flex-wrap my-2 px-0 position-relative">
-                    <div v-for="(map, index) in maps" :key="index">
-                        <img :src="map.item" :alt="map.alt" class="">
+            <div id="map-section" class="row">
+                <div id="map" class="d-flex flex-wrap justify-content-center my-2 px-0 position-relative">
+                    <div class="tiles" v-for="(map, index) in maps" :key="index">
+                        <img :src="map.item" :alt="map.alt" class="d-flex">
                     </div>
-                    <div class="position-absolute top-0 start-0 m-3 shadow-sm d-flex">
-                        <a href="#">
-                            <h5 class="p-2 fw-bold">
+
+                    <div class="fix position-absolute top-0 start-0 m-3 shadow-sm d-flex">
+                        <a href="#" class="rounded-start border-end bg-light">
+                            <h5 class="pt-1 px-4 fw-bold">
                                 Map
                             </h5>
                         </a>
-                        <a href="#">
-                            <h5 class="p-2">
+                        <a href="#" class=" pt-1 px-4 rounded-end bg-light">
+                            <h5 class="">
                                 Satellite
                             </h5>
                         </a>
                     </div>
+                    
                     <span class="position-absolute bottom-0 end-0 pe-2" style="font-size: 12px">
                         Map data &#169;2020 Google 200 m Terms of Use Report a map error
                     </span>
-                    <span class="position-absolute bottom-0 pe-2">
-                        <img src="../assets/images/google4.png" alt="" style="width:10% height:10%">
+                    <span class="position-absolute bottom-0 start-0 p-3" style="font-size: 12px">
+                        <img src="../assets/images/google4.png" alt="google">
                     </span>
+                    <span class="position-absolute position-marker p-2" style="font-size: 12px">
+                        <img src="../assets/images/default_marker.png" alt="google">
+                    </span>
+                    
+                    <div class="map-style">
+                        <div class="d-flex flex-column align-items-center position-absolute bottom-0 end-0 m-2">
+                            <div class="d-flex mb-3">
+                                <a href="#" class="rounded p-2">
+                                    <img src="../assets/images/image (4).svg" alt=" street view">
+                                </a>
+                            </div>
+
+                            <div class="d-flex flex-column mb-5 m-1 fs-4">
+                                <a href="#" class="px-2 py-1 border-bottom rounded-top">
+                                    <img src="../assets/images/image (7).svg" alt="increment">
+                                </a>
+                                <a href="#" class="px-2 py-1 rounded-bottom">
+                                    <img src="../assets/images/image (8).svg" alt="reduce">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
             </div>
@@ -914,18 +938,47 @@ name: 'Main',
 }
 
 /* map */
-#map {
+#map-section {
     width: 100%;
     margin: 0;
-    img {
-        width: 100%;
-        height: 271.7px;
-    }
-    span {
-        img {
-            width: 100%;
-            height: 100%;
+    #map {
+        .tiles {
+            img {
+                width: 100%;
+                height: 274px;
+            }
         }
+        .position-marker {
+            left: 47%;
+            bottom: 38%;
+        }
+    }
+    .fix {
+            a {
+                text-decoration: none;
+                color: #272727;
+            }
+        }
+    .map-style {
+
+    a {
+        text-decoration: none;
+        background: #fff;
+
+        h5 {
+            font-size: 18px;
+            line-height: 0;
+        }
+
+        &:nth-last-child(1) {
+            color: #868686;
+        }
+    }     
+}
+
+    span {
+        font-size: 9px;
+        font-weight: 600;
     }
 }
 
