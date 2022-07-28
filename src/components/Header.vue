@@ -1,15 +1,17 @@
 <template>
     <header>
-        <div class="container d-flex justify-content-around p-5">
-            <img  src="../assets/images/logo.png" alt="">
-            <nav>
-                <ul>
-                    <li v-for="(element, index) in elementList" :key="index" class="me-5 text-uppercase fw-bold">
-                        <a href="#">{{ element.text }}</a>
-                    </li>
-                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                </ul>
-            </nav>
+        <div class="container">
+            <div class="d-flex justify-content-around p-5 pb-3">
+                <img  src="../assets/images/logo.png" alt="">
+                <nav>
+                    <ul>
+                        <li v-for="(element, index) in elementList" :key="index" class="me-4 text-uppercase fw-bold">
+                            <a href="#">{{ element.text }}</a>
+                        </li>
+                        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 </template>
@@ -56,7 +58,7 @@ data() {
 
 
 img {
-    height: 1.3rem;
+    height: 20px;
 }
 
 ul li {
@@ -75,6 +77,8 @@ ul li {
 a {
     text-decoration: none;
     color: #8f8e95;
+    letter-spacing: 2px;
+    font-size: 12px;
 
     &:hover {
             color: #f72a0c;

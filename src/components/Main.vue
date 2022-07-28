@@ -46,6 +46,7 @@
                 </div>
             </div>
             <!-- fine countdown -->
+
             <!-- speakers -->
             <div id="speakers-section" class="row d-flex flex-column justify-content-center">
 
@@ -194,6 +195,7 @@
                 
             </div>
             <!-- fine map -->
+
             <!-- location -->
             <div id="location-section" class="row m-0">
                 <div class="d-flex flex-column justify-content-center gap-2 text-center">
@@ -230,6 +232,7 @@
                 </div>
                 
             </div>
+            <!-- fine location -->
 
             <!-- recent news -->
             <div id="news-section" class="row d-flex justify-content-around align-items-center">
@@ -279,6 +282,7 @@
                 </div>
             </div>
             <!-- fine recent news -->
+
             <!-- tickets -->
             <div id="tickets-section" class="row d-flex justify-content-center align-items-center m-0 py-5">
                 <h1 class="text-center fw-bold text-white">
@@ -323,6 +327,68 @@
                 </div>
             </div>
             <!-- fine tickets -->
+
+            <!-- presentation twitter -->
+            <div id="presentation" class="row d-flex justify-content-center align-items-center gap-4">
+                <div id="presentation-player">
+                    <h4 class="fw-bold mb-5 text-start">
+                        PRESENTATION
+                    </h4>
+
+                    <div class="position-relative">
+                        <img src="../assets/images/461365506.jpeg" alt="vimeo_img">
+                    
+                        
+                        
+                        <div id="video-bar" class="position-absolute bottom-0 mb-2 rounded-start p-1" style="width: 90%">
+                            <div id="button-bar" class="d-flex justify-content-center align-items-center gap-2 ">
+
+                                <div id="play" class="position-absolute bottom-0 start-0 rounded-1 ">
+                                    <a href="#" class="text-white ">
+                                        <font-awesome-icon icon="fas fa-play" />
+                                    </a>
+                                </div>
+                                <span class="position-absolute mb-4 px-2 text-white">
+                                    1:01:26
+                                </span>
+                                <span class="py-1 me-2 border border-secondary" style="width: 300px"></span>
+                                <a href="#">
+                                    <font-awesome-icon icon="fas fa-signal" />
+                                </a>
+                                <a href="#">
+                                    <font-awesome-icon icon="fas fa-cog" />
+                                </a>
+                            </div> 
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="twitter" class="d-flex flex-column justify-content-around">
+                    <h4 class="fw-bold mb-5 ms-3 text-start">
+                        TWITTER FEED
+                    </h4>
+
+                    <div class="social text-start" v-for="(twit, index) in twitter" :key="index">
+                        <ul class="p-0">
+                            <li>
+                                <p class="d-flex mb-3">
+                                    <font-awesome-icon :icon="twit.icon"
+                                    class="fs-4 px-3" style="color: #47b5e9" />
+                                    {{ twit.text }}
+                                </p>
+                                <span class="d-flex mb-4 fst-italic">
+                                    {{ twit.time }}
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!-- fine presentation twitter -->
+            
+
         </div>        
     </main>
 </template>
@@ -559,6 +625,23 @@ data() {
                     },
                 ],
                 button: "BOOK NOW",
+            },
+        ],
+        twitter: [
+            {
+                icon: "fab fa-twitter",
+                text: "Stand out and be vibrant with some of the best bright and bold templates on @Envato Elements. And add a splash of c...https://t.co/jFrsnzEJK7 ",
+                time: "3 days ago",
+            },
+            {
+                icon: "fab fa-twitter",
+                text: "Do you need to deliver the perfect presentation or creative pitch? Sure, your ideas and plan need to be on-point, b... https://t.co/nCmvsJVDpW",
+                time: "9 days ago",
+            },
+            {
+                icon: "fab fa-twitter",
+                text: "Cut yourself a piece of the BFCM sales pie with a solid marketing plan. Here are 5 ways to optimize your content fo... https://t.co/UZfKHshE0T",
+                time: "11 days ago",
             },
         ]
         }
@@ -816,9 +899,12 @@ data() {
 #news-section {
     width: 100%;
     #news-area {
-        width: 65%;
+        width: 60%;
         img {
             width: 100%;
+        }
+        h3 {
+            letter-spacing: 4px;
         }
         li {
             list-style-type: none;
@@ -862,7 +948,7 @@ data() {
             padding: 3rem 0;
         }
         .all-sec-ticket {
-            width: 22%;
+            width: 20%;
         li {
             list-style-type: none;
         }
@@ -890,4 +976,82 @@ data() {
         }
     }      
 }
+
+/* pres-twitter */
+#presentation {
+    width: 100%;
+    height: 60vh;
+
+    #presentation-player {
+        width: 28%;
+
+        h4 {
+            letter-spacing: 4px;
+        }
+
+        img {
+            width: 100%;
+            height: 300px;
+        }
+
+    #play {
+        background: rgba(#403d3b, $alpha: 0.9); 
+            
+        a {
+            color: #fff;
+        }
+        svg {
+            position: absolute;
+            top: -25px;
+            left: 12px;
+        }
+
+    }
+
+    #video-bar {
+        right: 30px;
+        background: rgba( #403d3b, $alpha: 0.9);
+        
+        a {
+            color: #fff;
+
+            &:nth-child(1) {
+                color: #5d5d5c;
+            }
+        }
+
+    #button-bar {
+
+        span {
+                left: 50px;
+            &:nth-child(1) {
+                    font-size: 11px;
+                    font-weight: 600;
+                    background: #ffffff;
+                }
+            }
+        }
+    }
+}
+    #twitter {
+        width: 32%;
+        .social {
+            font-size: 13px;
+            color: #868686;
+            
+
+            li {
+                list-style-type: none;
+            p {
+                font-size: 0.9rem;
+                }
+
+            span {
+            margin-left: 55px;
+                }
+            }
+        }
+    }
+}
+
 </style>
