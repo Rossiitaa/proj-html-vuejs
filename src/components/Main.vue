@@ -239,10 +239,10 @@
                 <div id="news-area" class="my-5">
 
                     <div class="d-flex justify-content-between mb-5">
-                        <h3 class="fw-bold">
+                        <h3 class="fw-bold ">
                             RECENT NEWS
                         </h3>
-                        <a href="#" class="read-all-news">
+                        <a href="#" class="read-all-news fst-italic">
                             <span>
                                 Read All News
                             </span>
@@ -284,7 +284,7 @@
             <!-- fine recent news -->
 
             <!-- tickets -->
-            <div id="tickets-section" class="row d-flex justify-content-center align-items-center m-0 py-5">
+            <div id="tickets-section" class="row d-flex justify-content-center align-items-center m-0 ">
                 <h1 class="text-center fw-bold text-white">
                     TICKETS
                 </h1>
@@ -732,9 +732,8 @@ name: 'Main',
 /* countdown */
 #countdown {
     width: 100%;
-    height: 70vh;
+    height: 50vh;
     background: url(../assets/images/coutdown-bg1.jpg);
-    background-size: contain;
     background-position: center;
     margin: 0;
     #count-card {
@@ -838,6 +837,7 @@ name: 'Main',
                 width: 45%;
                 font-size: 15px;
                 opacity: 0.6;
+                padding-right: 80px;
             }
             a {
                 font-size: 17px;
@@ -901,6 +901,7 @@ name: 'Main',
                     p {
                         color: #868686;
                         opacity: 0.8;
+                        font-size: 14px;
                     }
                     img {
                         width: 6%;
@@ -987,13 +988,12 @@ name: 'Main',
 /* tickets */
 #tickets-section {
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     background: url(../assets/images/ticket-bg.jpg);
     background-position: center;
     background-size: contain;
         h1 {
             letter-spacing: 4px;
-            padding: 3rem 0;
         }
         .all-sec-ticket {
             width: 20%;

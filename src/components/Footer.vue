@@ -5,7 +5,7 @@
             <div id="footer-top" class="d-flex flex-column justify-content-start mx-auto">
                 <div class="footer-content d-flex justify-content-center gap-5 ms-5">
 
-                    <div class="about-us d-flex flex-column text-start">
+                    <div class="about-us d-flex flex-column text-start ms-5">
                         <h6 class="mb-4">
                             ABOUT US
                         </h6>
@@ -89,18 +89,18 @@
                         </h6>
 
                         <div class="single-image d-flex flex-wrap gap-2">
-                            <img :src="gallery.tile1" alt="tile1">
-                            <img :src="gallery.tile2" alt="tile2">
-                            <img :src="gallery.tile3" alt="tile3">
-                            <img :src="gallery.tile4" alt="tile4">
-                            <img :src="gallery.tile5" alt="tile5">
-                            <img :src="gallery.tile6" alt="tile6">
-                            <img :src="gallery.tile7" alt="tile7">
-                            <img :src="gallery.tile8" alt="tile8">
-                            <img :src="gallery.tile9" alt="tile9">
-                            <img :src="gallery.tile10" alt="tile10">
-                            <img :src="gallery.tile11" alt="tile11">
-                            <img :src="gallery.tile12" alt="tile12">
+                            <img :src="gallery.tile1" alt="cups of coffee">
+                            <img :src="gallery.tile2" alt="conference with woman">
+                            <img :src="gallery.tile3" alt="desk with person">
+                            <img :src="gallery.tile4" alt="conference with man">
+                            <img :src="gallery.tile5" alt="coffee meeting">
+                            <img :src="gallery.tile6" alt="rockable cards">
+                            <img :src="gallery.tile7" alt="personal items">
+                            <img :src="gallery.tile8" alt="desk setup">
+                            <img :src="gallery.tile9" alt="woman on the phone">
+                            <img :src="gallery.tile10" alt="rockable cards 2">
+                            <img :src="gallery.tile11" alt="sea">
+                            <img :src="gallery.tile12" alt="clothes">
                         </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@ name: 'Footer',
 
     #footer-top {
         width: 100%;
-        height: 39vh;
+        height: 33vh;
         margin-top: 4rem;
 
         h6 {

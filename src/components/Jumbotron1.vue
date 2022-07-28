@@ -4,7 +4,7 @@
         <h2>CONFERENCE ON</h2>
         <h1>SOCIAL NETWORKS</h1>
         <img class="line" src="../assets/images/1-item-2.jpg" alt="">
-        <p class="">23-26 MAY 2019 <span class="mx-4 fw-light">/</span> SANS FRANCISCO <span class="mx-4 fw-light">/</span> 8 SPEAKERS</p>
+        <p>23 - 26 MAY 2019 <span class="mx-4 fw-light">/</span> SANS FRANCISCO <span class="mx-4 fw-light">/</span> 8 SPEAKERS</p>
         <button class="btn">REGISTER ONLINE</button>
     </div>
 </template>
@@ -17,7 +17,7 @@ export default {
 
 <style lang='scss' scoped>
 .cont-jumb {
-        height: 40rem;
+        height: 37rem;
     }
 
 img {
@@ -66,7 +66,8 @@ img {
         top: 75%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 1.2rem;
+        font-size: 1rem;
+        letter-spacing: 1px;
         font-weight: bold;
         color: #fff;
         padding: 1rem 2rem;
