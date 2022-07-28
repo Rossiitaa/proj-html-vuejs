@@ -30,4 +30,9 @@ export default {
 @import '~bootstrap/scss/bootstrap.scss';
 @import './styles/general.scss';
 
+* {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+
 </style>

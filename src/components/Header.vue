@@ -6,7 +6,7 @@
                 <nav>
                     <ul>
                         <li v-for="(element, index) in elementList" :key="index" class="me-4 text-uppercase fw-bold">
-                            <a href="#">{{ element.text }}</a>
+                            <a href="#" class="fw-bold">{{ element.text }}</a>
                         </li>
                         <li><i class="fa-solid fa-magnifying-glass"></i></li>
                     </ul>

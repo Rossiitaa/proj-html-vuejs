@@ -6,7 +6,7 @@
                 <div class="info-text col-12 d-flex flex-column justify-content-around position-relative" v-for="(info , index) in informations" :key="index">
                     <div class="d-flex fs-4">
                         <font-awesome-icon :icon="info.icon" class="mr-3" />
-                        <h6>{{ info.title }}</h6>
+                        <h6 class="fw-bold">{{ info.title }}</h6>
                     </div>
                     <p>
                         {{ info.text }}
@@ -387,8 +387,29 @@
                 </div>
             </div>
             <!-- fine presentation twitter -->
-            
 
+            <!-- sponsors -->
+            <div id="sponsor" class="row d-flex flex-column justify-content-center align-items-center gap-4 m-0 text-center">
+
+                <h3 class="fs-1 fw-bold ">
+                    SPONSORS
+                </h3>
+                <p class="mb-5" style="width: 20%">
+                    Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                
+                <div id="sponsorsList" class="d-flex justify-content-center">
+                    <div class="single-sponsor mx-4" v-for="(sponsor, index) in sponsors" :key="index">
+                        <ul class="p-0">
+                            <li>
+                                <img :src="sponsor.img" :alt="sponsor.alt">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
+            
         </div>        
     </main>
 </template>
@@ -630,7 +651,7 @@ data() {
         twitter: [
             {
                 icon: "fab fa-twitter",
-                text: "Stand out and be vibrant with some of the best bright and bold templates on @Envato Elements. And add a splash of c...https://t.co/jFrsnzEJK7 ",
+                text: "Stand out and be vibrant with some of the best bright and bold templates on @Envato Elements. And add a splash of c... https://t.co/jFrsnzEJK7 ",
                 time: "3 days ago",
             },
             {
@@ -643,7 +664,33 @@ data() {
                 text: "Cut yourself a piece of the BFCM sales pie with a solid marketing plan. Here are 5 ways to optimize your content fo... https://t.co/UZfKHshE0T",
                 time: "11 days ago",
             },
-        ]
+        ],
+        sponsors: [
+                {
+                    img: require("../assets/images/banner-1.jpg"),
+                    alt: "drogler_img"
+                },
+                {
+                    img: require("../assets/images/banner-2.jpg"),
+                    alt: "lynk_sys_img"
+                },
+                {
+                    img: require("../assets/images/banner-3.jpg"),
+                    alt: "pointer_co_img"
+                },
+                {
+                    img: require("../assets/images/banner-4.jpg"),
+                    alt: "max_star_img"
+                },
+                {
+                    img: require("../assets/images/banner-5.jpg"),
+                    alt: "globe_care_img"
+                },
+                {
+                    img: require("../assets/images/banner-6.jpg"),
+                    alt: "the_shield_img"
+                },
+            ]
         }
     }
 }
@@ -1035,6 +1082,10 @@ data() {
 }
     #twitter {
         width: 32%;
+
+        h4 {
+            letter-spacing: 4px;
+        }
         .social {
             font-size: 13px;
             color: #868686;
@@ -1054,4 +1105,30 @@ data() {
     }
 }
 
+/* sponsor */
+#sponsor {
+    width: 100%;
+    height: 52vh;
+    background: #f5f5f5;
+
+    h3 {
+        letter-spacing: 4px;
+        margin: 0;
+    }
+
+    p {
+        color: #868686;
+        font-size: 15px;
+    }
+
+    #sponsorsList {
+        
+        .single-sponsor {
+
+            li {
+                list-style-type: none;
+            }
+        }
+    }      
+}
 </style>
