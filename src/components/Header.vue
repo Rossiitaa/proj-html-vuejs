@@ -68,11 +68,6 @@ ul li {
     font-size: 0.7rem;
     cursor: pointer;
     padding-bottom: 5px;
-
-    &:hover {
-            border-bottom: 3px solid #f72a0c;
-            color: #f72a0c;
-        }
 }
 
 a {
@@ -83,6 +78,7 @@ a {
 
     &:hover {
             color: #f72a0c;
+            border-bottom: 3px solid #f72a0c; 
         }
 }
 </style>
