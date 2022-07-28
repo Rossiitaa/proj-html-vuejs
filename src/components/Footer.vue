@@ -103,8 +103,21 @@
                             <img :src="gallery.tile12" alt="tile12">
                         </div>
                     </div>
-                    
                 </div>
+            </div>
+
+            <div id="footer-bottom" class="d-flex justify-content-center align-items-center">
+
+                <div id="text-footer-bottom" class="d-flex justify-content-around">
+                    <span>
+                        &copy; Copyright GooLayers, All Right Reserved
+                    </span>
+
+                    <span>
+                        <a href="#">About Us</a> | <a href="#">Accommodation</a> | <a href="#">Call For Paper</a> | <a href="#">Contatct Us</a>
+                    </span>
+                </div>
+
             </div>
         </div>
     </footer>
@@ -207,6 +220,28 @@ name: 'Footer',
                     max-width: 100%;
                     height: 6vh;
                 }
+            }
+        }
+    }
+    #footer-bottom {
+        height: calc(100% - 39vh);
+        background: #171717;
+
+        #text-footer-bottom {
+            width: 80%;
+            font-size: 13px;
+
+            span {
+                color: #4d4d4a;
+
+                &:last-child {
+                    color: #6c6a6b;
+                }
+            a {
+                text-decoration: none;
+                color: #4d4d4a;
+                letter-spacing: 1px;
+            }
             }
         }
     }
